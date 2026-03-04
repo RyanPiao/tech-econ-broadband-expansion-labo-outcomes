@@ -3,7 +3,15 @@
 
 This repository now contains the **full Day2-Day7 continuation** for the approved Day-1 framing.
 
+## Start here (primary single-page overview)
+- **Executive summary:** [`docs/weekX_executive_summary.md`](docs/weekX_executive_summary.md)
+- Website abstract source: [`docs/weekX_website_abstract.md`](docs/weekX_website_abstract.md)
+
 ## Scope completed in this run
+
+### Executive summary
+- `docs/weekX_executive_summary.md`
+
 - ✅ **Day 2**: ingestion/spec lock/QA + analysis-ready county-year panel
 - ✅ **Day 3**: EDA notebook + exploratory outputs
 - ✅ **Day 4**: baseline FE model + event-study diagnostics
