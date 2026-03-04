@@ -1,18 +1,19 @@
 # Tech-Econ Weekly Lab Run (Week X)
 ## Broadband Expansion × Labor Outcomes
 
-This repository now contains a **fresh Day2-Day4 execution** built on the approved Day-1 framing.
+This repository now contains the **full Day2-Day7 continuation** for the approved Day-1 framing.
 
 ## Scope completed in this run
-- ✅ **Day 2**: ingestion/spec lock/QA + initial data artifacts
+- ✅ **Day 2**: ingestion/spec lock/QA + analysis-ready county-year panel
 - ✅ **Day 3**: EDA notebook + exploratory outputs
-- ✅ **Day 4**: baseline FE model + event-study diagnostics + interpretation notes
-- ⛔ Days 5-7 are intentionally out of scope for this run.
+- ✅ **Day 4**: baseline FE model + event-study diagnostics
+- ✅ **Day 5**: robustness/sensitivity package + limitations register
+- ✅ **Day 6**: reproducibility polish (manifest, requirements snapshot, runbook)
+- ✅ **Day 7**: weekly recap report suitable for website research summary
 
 ---
 
-## Day-1 must-fix closure (applied first)
-All must-fix items from `DAY1_review.md` were locked before modeling:
+## Day-1 must-fix closure (applied before modeling)
 - `docs/day2_preanalysis_lock.md`
 - `docs/day2_data_extraction_spec.md`
 - `docs/day2_data_qa_checklist.md`
@@ -24,8 +25,8 @@ All must-fix items from `DAY1_review.md` were locked before modeling:
 - U.S. Census ACS 5-year API (county-year, 2017-2023)
 
 ### Blocked component and fallback
-- **Blocked:** historical FCC Form-477 + BDC harmonized county availability build in this run window.
-- **Fallback used:** ACS broadband subscription share (`B28002_004E / B28002_001E`) as treatment proxy.
+- **Blocked in Week-X:** harmonized historical FCC Form-477/BDC county availability panel.
+- **Fallback used:** ACS household broadband subscription share (`B28002_004E / B28002_001E`) as treatment proxy.
 - **Synthetic data:** not used.
 
 ---
@@ -43,64 +44,61 @@ All must-fix items from `DAY1_review.md` were locked before modeling:
 ├── data_intermediate/
 ├── data_analysis/
 ├── docs/
-│   ├── day2_preanalysis_lock.md
-│   ├── day2_data_extraction_spec.md
-│   ├── day2_data_qa_checklist.md
+│   ├── day2_*.md
 │   ├── day3_eda_note.md
-│   └── day4_interpretation_notes.md
+│   ├── day4_interpretation_notes.md
+│   ├── day5_robustness_limitations.md
+│   ├── day6_reproducibility_runbook.md
+│   ├── day6_reproducibility_checklist.md
+│   └── day7_weekly_recap.md
 ├── notebooks/
-│   ├── day3_eda.ipynb
-│   └── day4_baseline_model.ipynb
 ├── outputs/
 └── scripts/
     ├── day2_ingest_build_panel.py
     ├── day3_eda.py
     ├── day4_baseline_model.py
-    └── run_day2_day4.py
+    ├── day5_robustness_sensitivity.py
+    ├── day6_reproducibility_polish.py
+    ├── day7_weekly_recap.py
+    ├── run_day2_day4.py
+    └── run_day2_day7.py
 ```
 
 ---
 
 ## Reproducibility
 
+### Full rerun
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/run_day2_day4.py
+python scripts/run_day2_day7.py
 ```
+
+### Reproducibility package outputs
+- `outputs/day6_artifact_manifest.csv`
+- `outputs/day6_requirements_snapshot.csv`
+- `outputs/day6_run_metadata.json`
+- `docs/day6_reproducibility_runbook.md`
 
 ---
 
-## Key outputs by day
+## Day5-Day7 core artifacts
 
-### Day 2
-- `data_raw/day2_acs_raw_2017_2023.csv`
-- `data_intermediate/day2_county_year_panel.csv`
-- `data_analysis/county_year_panel.csv`
-- `outputs/day2_source_manifest.csv`
-- `outputs/day2_qa_report.csv`
-- `outputs/day2_missingness_by_variable.csv`
-- `outputs/day2_sample_by_year.csv`
-- `outputs/day2_panel_build_summary.json`
+### Day 5 (robustness/sensitivity + limitations)
+- `outputs/day5_robustness_sensitivity.csv`
+- `outputs/day5_limitations_register.csv`
+- `docs/day5_robustness_limitations.md`
 
-### Day 3
-- `notebooks/day3_eda.ipynb`
-- `outputs/day3_eda_summary_stats.csv`
-- `outputs/day3_eda_missingness.csv`
-- `outputs/day3_eda_yearly_means.csv`
-- `outputs/day3_eda_correlation_matrix.csv`
-- `outputs/day3_eda_treatment_support.csv`
-- `outputs/day3_eda_trends.png`
-- `outputs/day3_eda_broadband_distribution.png`
-- `outputs/day3_eda_correlation_heatmap.png`
-- `docs/day3_eda_note.md`
+### Day 6 (reproducibility polish)
+- `outputs/day6_artifact_manifest.csv`
+- `outputs/day6_requirements_snapshot.csv`
+- `outputs/day6_run_metadata.json`
+- `docs/day6_reproducibility_runbook.md`
+- `docs/day6_reproducibility_checklist.md`
 
-### Day 4
-- `notebooks/day4_baseline_model.ipynb`
-- `outputs/day4_baseline_model_results.csv`
-- `outputs/day4_event_study_results.csv`
-- `outputs/day4_event_study_plot.png`
-- `outputs/day4_model_diagnostics.csv`
-- `outputs/day4_model_sample_support.csv`
-- `docs/day4_interpretation_notes.md`
+### Day 7 (weekly recap)
+- `docs/day7_weekly_recap.md`
+- `outputs/day7_website_summary.txt`
+- `outputs/day7_recap_metadata.json`
