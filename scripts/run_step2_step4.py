@@ -10,9 +10,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 STEPS = [
-    "scripts/day2_ingest_build_panel.py",
-    "scripts/day3_eda.py",
-    "scripts/day4_baseline_model.py",
+    "scripts/step2_ingest_build_panel.py",
+    "scripts/step3_eda.py",
+    "scripts/step4_baseline_model.py",
 ]
 
 
