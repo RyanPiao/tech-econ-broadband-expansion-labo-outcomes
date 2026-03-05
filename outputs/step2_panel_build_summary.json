@@ -7,6 +7,6 @@
   "rows": 22000,
   "counties": 3153,
   "fail_stop_triggered": false,
-  "raw_path": "data_raw/day2_acs_raw_2017_2023.csv",
-  "panel_path": "data_intermediate/day2_county_year_panel.csv"
+  "raw_path": "data_raw/step2_acs_raw_2017_2023.csv",
+  "panel_path": "data_intermediate/step2_county_year_panel.csv"
 }

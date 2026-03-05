@@ -48,6 +48,6 @@ summary = {
     "missing": {k: int(panel[k].isna().sum()) for k in panel.columns if k != "date"},
 }
 (ROOT / "outputs").mkdir(exist_ok=True)
-with open(ROOT / "outputs/day2_panel_build_summary.json", "w") as f:
+with open(ROOT / "outputs/step2_panel_build_summary.json", "w") as f:
     json.dump(summary, f, indent=2)
 print(json.dumps(summary, indent=2))

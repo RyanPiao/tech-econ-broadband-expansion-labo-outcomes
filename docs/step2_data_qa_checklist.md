@@ -1,6 +1,6 @@
 # Step 2 Data QA Checklist
 
-This checklist is executed programmatically by `scripts/day2_ingest_build_panel.py`.
+This checklist is executed programmatically by `scripts/step2_ingest_build_panel.py`.
 
 ## Merge keys and structural checks
 - [ ] Key exists: `county_id`, `year`
@@ -21,5 +21,5 @@ For share/rate variables:
 
 ## Fail-stop rule
 If any check fails:
-1. Write failing checks to `outputs/day2_qa_report.csv`
+1. Write failing checks to `outputs/step2_qa_report.csv`
 2. Raise error and stop pipeline (Step3-Step4 not run)

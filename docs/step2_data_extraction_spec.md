@@ -32,14 +32,14 @@ Construct a reproducible county-year panel for 2017-2023 using **public real** C
 - Keep all rows through ingestion; model scripts apply complete-case filtering by specification.
 
 ## Output files (Step 2)
-- `data_raw/day2_acs_raw_2017_2023.csv`
-- `data_intermediate/day2_county_year_panel.csv`
+- `data_raw/step2_acs_raw_2017_2023.csv`
+- `data_intermediate/step2_county_year_panel.csv`
 - `data_analysis/county_year_panel.csv`
-- `outputs/day2_source_manifest.csv`
-- `outputs/day2_qa_report.csv`
-- `outputs/day2_missingness_by_variable.csv`
-- `outputs/day2_sample_by_year.csv`
-- `outputs/day2_panel_build_summary.json`
+- `outputs/step2_source_manifest.csv`
+- `outputs/step2_qa_report.csv`
+- `outputs/step2_missingness_by_variable.csv`
+- `outputs/step2_sample_by_year.csv`
+- `outputs/step2_panel_build_summary.json`
 
 ## Blocker and fallback statement
 - **Blocked component:** historical FCC availability harmonization (Form 477 + BDC).

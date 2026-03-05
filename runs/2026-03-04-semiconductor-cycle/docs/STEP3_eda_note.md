@@ -1,12 +1,12 @@
 # Step 3 (Wednesday) — EDA Note
 
-This note summarizes outputs from `scripts/day3_eda.py`.
+This note summarizes outputs from `scripts/step3_eda.py`.
 
 ## Deliverables
-- `outputs/day3_corr_matrix.csv`
-- `outputs/day3_lag_scan.csv`
-- `outputs/day3_growth_overlay.png`
-- `outputs/day3_eda_summary.json`
+- `outputs/step3_corr_matrix.csv`
+- `outputs/step3_lag_scan.csv`
+- `outputs/step3_growth_overlay.png`
+- `outputs/step3_eda_summary.json`
 
 ## Step 3 readout (executed)
 - Contemporaneous correlation (`chip_yoy`, `software_emp_yoy`): **0.3534**.

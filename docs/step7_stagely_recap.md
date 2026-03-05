@@ -18,9 +18,9 @@
 - Stage-2 priority: integrate harmonized FCC availability panel and re-estimate with modern staggered-treatment methods.
 
 ## Reproducibility package status
-- Artifact hashes logged: **8** files (`outputs/day6_artifact_manifest.csv`).
-- Environment snapshot: `outputs/day6_requirements_snapshot.csv` and `outputs/day6_run_metadata.json`.
-- End-to-end command: `python scripts/run_day2_day7.py`.
+- Artifact hashes logged: **8** files (`outputs/step6_artifact_manifest.csv`).
+- Environment snapshot: `outputs/step6_requirements_snapshot.csv` and `outputs/step6_run_metadata.json`.
+- End-to-end command: `python scripts/run_step2_step7.py`.
 
 ## Website-ready blurb
 Stage-X (Broadband × Labor): Step5-Step7 continuation completed with robustness/sensitivity checks, limitations register, and reproducibility manifest. Baseline remote-work coefficient remained negative (10pp effect = -0.0109, p=1.05e-07) while income association was positive (10pp effect = 0.0417, p=9.05e-24). Result is documented as directional evidence pending FCC availability integration.

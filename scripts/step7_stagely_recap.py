@@ -58,16 +58,16 @@ def main() -> None:
 - Stage-2 priority: integrate harmonized FCC availability panel and re-estimate with modern staggered-treatment methods.
 
 ## Reproducibility package status
-- Artifact hashes logged: **{len(manifest)}** files (`outputs/day6_artifact_manifest.csv`).
-- Environment snapshot: `outputs/day6_requirements_snapshot.csv` and `outputs/day6_run_metadata.json`.
-- End-to-end command: `python scripts/run_day2_day7.py`.
+- Artifact hashes logged: **{len(manifest)}** files (`outputs/step6_artifact_manifest.csv`).
+- Environment snapshot: `outputs/step6_requirements_snapshot.csv` and `outputs/step6_run_metadata.json`.
+- End-to-end command: `python scripts/run_step2_step7.py`.
 
 ## Website-ready blurb
 {website_blurb}
 """
 
-    (DOCS / "day7_weekly_recap.md").write_text(recap)
-    (OUTPUTS / "day7_website_summary.txt").write_text(website_blurb + "\n")
+    (DOCS / "step7_stagely_recap.md").write_text(recap)
+    (OUTPUTS / "step7_website_summary.txt").write_text(website_blurb + "\n")
 
     recap_meta = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -78,9 +78,9 @@ def main() -> None:
         "robustness_specs": int(len(robust)),
         "same_sign_share": same_sign_share,
     }
-    (OUTPUTS / "day7_recap_metadata.json").write_text(json.dumps(recap_meta, indent=2))
+    (OUTPUTS / "step7_recap_metadata.json").write_text(json.dumps(recap_meta, indent=2))
 
-    print("Step7 weekly recap outputs written.")
+    print("Step7 stagely recap outputs written.")
 
 
 if __name__ == "__main__":

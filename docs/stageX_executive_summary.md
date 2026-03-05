@@ -12,7 +12,7 @@ Broadband policy is commonly justified as a labor-market inclusion and productiv
 - **Public real data (active):** U.S. Census ACS 5-year county-year pulls (2017-2023), via `https://api.census.gov/data/{year}/acs/acs5`.
 - **Treatment used in this study:** household broadband subscription share (`B28002_004E / B28002_001E`).
 - **Outcomes:** remote-work share (`B08006_017E / B08006_001E`), digital employment share (ACS `C24030` mapping), log median household income (`log(B19013_001E)`).
-- **Provenance artifacts:** `outputs/day2_source_manifest.csv` (year-level URLs + access timestamps), `outputs/day2_qa_report.csv` (all QA checks passed).
+- **Provenance artifacts:** `outputs/step2_source_manifest.csv` (year-level URLs + access timestamps), `outputs/step2_qa_report.csv` (all QA checks passed).
 - **Synthetic data:** Not used.
 - **Blocked component:** harmonized historical FCC Form 477/BDC county availability series (deferred).
 
@@ -36,11 +36,11 @@ Broadband policy is commonly justified as a labor-market inclusion and productiv
 - Stable measurement framework (with explicit acknowledgment of post-2022 FCC series-break risk for future integration).
 
 ## 5) Key findings (3-5 bullets)
-- **Data quality and coverage are strong:** all Step-2 QA gates pass; coverage is ~3,142-3,144 counties/year, full-panel share 0.994 (`outputs/day2_qa_report.csv`).
-- **Baseline remote-work estimate is negative:** coef = **-0.1093** (SE 0.0205, p=1.05e-07), implying **-0.0109** for a +10pp broadband increase (`outputs/day4_baseline_model_results.csv`).
-- **Income association is positive and precise:** coef = **+0.4167** (SE 0.0415, p=9.05e-24), implying **+0.0417 log points** per +10pp broadband (`outputs/day4_baseline_model_results.csv`).
-- **Event-study pre-trend concern remains:** lead at k=-3 is significant (p=0.0078), failing pre-trend gate (`outputs/day4_event_study_results.csv`, `outputs/day4_model_diagnostics.csv`).
-- **Robustness is mostly sign-consistent but not invariant:** 7/8 specs keep baseline sign; first-difference flips positive, highlighting specification sensitivity (`outputs/day5_robustness_sensitivity.csv`).
+- **Data quality and coverage are strong:** all Step-2 QA gates pass; coverage is ~3,142-3,144 counties/year, full-panel share 0.994 (`outputs/step2_qa_report.csv`).
+- **Baseline remote-work estimate is negative:** coef = **-0.1093** (SE 0.0205, p=1.05e-07), implying **-0.0109** for a +10pp broadband increase (`outputs/step4_baseline_model_results.csv`).
+- **Income association is positive and precise:** coef = **+0.4167** (SE 0.0415, p=9.05e-24), implying **+0.0417 log points** per +10pp broadband (`outputs/step4_baseline_model_results.csv`).
+- **Event-study pre-trend concern remains:** lead at k=-3 is significant (p=0.0078), failing pre-trend gate (`outputs/step4_event_study_results.csv`, `outputs/step4_model_diagnostics.csv`).
+- **Robustness is mostly sign-consistent but not invariant:** 7/8 specs keep baseline sign; first-difference flips positive, highlighting specification sensitivity (`outputs/step5_robustness_sensitivity.csv`).
 
 ## 6) Robustness summary
 - Robustness package ran 8 pre-specified specifications; all have p<0.10, and 88% preserve baseline sign/magnitude range around ~-0.011 per +10pp.
@@ -69,25 +69,25 @@ cd /Users/openclaw/.openclaw/workspace/projects/te-research-lab-weekX
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/run_day2_day7.py
+python scripts/run_step2_step7.py
 ```
 Component-level reproduction option:
 ```bash
-python scripts/day2_ingest_build_panel.py
-python scripts/day3_eda.py
-python scripts/day4_baseline_model.py
-python scripts/day5_robustness_sensitivity.py
-python scripts/day6_reproducibility_polish.py
-python scripts/day7_weekly_recap.py
+python scripts/step2_ingest_build_panel.py
+python scripts/step3_eda.py
+python scripts/step4_baseline_model.py
+python scripts/step5_robustness_sensitivity.py
+python scripts/step6_reproducibility_polish.py
+python scripts/step7_stagely_recap.py
 ```
 
 ## 10) Evidence links + citations + next-stage plan
 **Core evidence links:**
-- Design/spec/QA: `docs/day2_preanalysis_lock.md`, `docs/day2_data_extraction_spec.md`, `docs/day2_data_qa_checklist.md`
-- Exploration + baseline interpretation: `docs/day3_eda_note.md`, `docs/day4_interpretation_notes.md`
-- Robustness + limitations: `docs/day5_robustness_limitations.md`, `outputs/day5_robustness_sensitivity.csv`, `outputs/day5_limitations_register.csv`
-- Reproducibility: `docs/day6_reproducibility_runbook.md`, `outputs/day6_artifact_manifest.csv`, `outputs/day6_run_metadata.json`
-- Study recap: `docs/day7_weekly_recap.md`
+- Design/spec/QA: `docs/step2_preanalysis_lock.md`, `docs/step2_data_extraction_spec.md`, `docs/step2_data_qa_checklist.md`
+- Exploration + baseline interpretation: `docs/step3_eda_note.md`, `docs/step4_interpretation_notes.md`
+- Robustness + limitations: `docs/step5_robustness_limitations.md`, `outputs/step5_robustness_sensitivity.csv`, `outputs/step5_limitations_register.csv`
+- Reproducibility: `docs/step6_reproducibility_runbook.md`, `outputs/step6_artifact_manifest.csv`, `outputs/step6_run_metadata.json`
+- Study recap: `docs/step7_stagely_recap.md`
 
 **Citations (data/methods):**
 - U.S. Census Bureau ACS API documentation: https://api.census.gov/data.html

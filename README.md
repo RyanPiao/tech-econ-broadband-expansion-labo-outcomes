@@ -4,20 +4,20 @@
 This repository now contains the **full Step 2-Step 7 continuation** for the approved Step-1 framing.
 
 ## Start here (primary single-page overview)
-- **Executive summary:** [`docs/weekX_executive_summary.md`](docs/weekX_executive_summary.md)
-- Website abstract source: [`docs/weekX_website_abstract.md`](docs/weekX_website_abstract.md)
+- **Executive summary:** [`docs/stageX_executive_summary.md`](docs/stageX_executive_summary.md)
+- Website abstract source: [`docs/stageX_website_abstract.md`](docs/stageX_website_abstract.md)
 
 ## Scope completed in this run
 
 ### Executive summary
-- `docs/weekX_executive_summary.md`
+- `docs/stageX_executive_summary.md`
 
 - ✅ **Step 2**: ingestion/spec lock/QA + analysis-ready county-year panel
 - ✅ **Step 3**: EDA notebook + exploratory outputs
 - ✅ **Step 4**: baseline FE model + event-study diagnostics
 - ✅ **Step 5**: robustness/sensitivity package + limitations register
 - ✅ **Step 6**: reproducibility polish (manifest, requirements snapshot, runbook)
-- ✅ **Step 7**: weekly recap report suitable for website research summary
+- ✅ **Step 7**: stagely recap report suitable for website research summary
 
 ---
 
@@ -58,7 +58,7 @@ This repository now contains the **full Step 2-Step 7 continuation** for the app
 │   ├── step5_robustness_limitations.md
 │   ├── step6_reproducibility_runbook.md
 │   ├── step6_reproducibility_checklist.md
-│   └── step7_weekly_recap.md
+│   └── step7_stagely_recap.md
 ├── notebooks/
 ├── outputs/
 └── scripts/
@@ -67,9 +67,9 @@ This repository now contains the **full Step 2-Step 7 continuation** for the app
     ├── step4_baseline_model.py
     ├── step5_robustness_sensitivity.py
     ├── step6_reproducibility_polish.py
-    ├── step7_weekly_recap.py
-    ├── run_day2_day4.py
-    └── run_day2_day7.py
+    ├── step7_stagely_recap.py
+    ├── run_step2_step4.py
+    └── run_step2_step7.py
 ```
 
 ---
@@ -81,7 +81,7 @@ This repository now contains the **full Step 2-Step 7 continuation** for the app
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/run_day2_day7.py
+python scripts/run_step2_step7.py
 ```
 
 ### Reproducibility package outputs
@@ -106,7 +106,7 @@ python scripts/run_day2_day7.py
 - `docs/step6_reproducibility_runbook.md`
 - `docs/step6_reproducibility_checklist.md`
 
-### Step 7 (weekly recap)
-- `docs/step7_weekly_recap.md`
+### Step 7 (stagely recap)
+- `docs/step7_stagely_recap.md`
 - `outputs/step7_website_summary.txt`
 - `outputs/step7_recap_metadata.json`

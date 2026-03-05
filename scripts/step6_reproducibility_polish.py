@@ -18,13 +18,13 @@ DOCS = PROJECT_ROOT / "docs"
 
 KEY_ARTIFACTS = [
     "data_analysis/county_year_panel.csv",
-    "outputs/day2_panel_build_summary.json",
-    "outputs/day3_eda_summary_stats.csv",
-    "outputs/day4_baseline_model_results.csv",
-    "outputs/day4_event_study_results.csv",
-    "outputs/day5_robustness_sensitivity.csv",
-    "outputs/day5_limitations_register.csv",
-    "docs/day5_robustness_limitations.md",
+    "outputs/step2_panel_build_summary.json",
+    "outputs/step3_eda_summary_stats.csv",
+    "outputs/step4_baseline_model_results.csv",
+    "outputs/step4_event_study_results.csv",
+    "outputs/step5_robustness_sensitivity.csv",
+    "outputs/step5_limitations_register.csv",
+    "docs/step5_robustness_limitations.md",
 ]
 
 

@@ -13,24 +13,24 @@ This runbook defines a repeatable Step2-Step7 execution path for the Stage-X bro
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/run_day2_day7.py
+python scripts/run_step2_step7.py
 ```
 
 ## Stage-by-stage execution
 ```bash
-python scripts/day2_ingest_build_panel.py
-python scripts/day3_eda.py
-python scripts/day4_baseline_model.py
-python scripts/day5_robustness_sensitivity.py
-python scripts/day6_reproducibility_polish.py
-python scripts/day7_weekly_recap.py
+python scripts/step2_ingest_build_panel.py
+python scripts/step3_eda.py
+python scripts/step4_baseline_model.py
+python scripts/step5_robustness_sensitivity.py
+python scripts/step6_reproducibility_polish.py
+python scripts/step7_stagely_recap.py
 ```
 
 ## Reproducibility outputs to verify
-- `outputs/day6_artifact_manifest.csv`
-- `outputs/day6_requirements_snapshot.csv`
-- `outputs/day6_run_metadata.json`
-- `docs/day7_weekly_recap.md`
+- `outputs/step6_artifact_manifest.csv`
+- `outputs/step6_requirements_snapshot.csv`
+- `outputs/step6_run_metadata.json`
+- `docs/step7_stagely_recap.md`
 
 ## Troubleshooting
 1. **ACS API timeout/rate limits**

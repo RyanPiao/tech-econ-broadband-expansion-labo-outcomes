@@ -57,7 +57,7 @@ At minimum one spillover check is required in continuation analyses:
 For this Step4 baseline package, diagnostics remain within primary model scope; spillover checks are earmarked for next robustness cycle.
 
 ## 8) Step 2 QA checklist + fail-stop conditions
-Implemented in `scripts/day2_ingest_build_panel.py` and written to `outputs/day2_qa_report.csv`.
+Implemented in `scripts/step2_ingest_build_panel.py` and written to `outputs/step2_qa_report.csv`.
 Required checks:
 1. Year set exactly 2017-2023
 2. Unique `(county_id, year)` key (no duplicates)
